@@ -1,0 +1,189 @@
+.contact-container {
+  padding: 100px 20px;
+  background-color: #141414;
+  color: #e6e6e6;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Profile Card */
+.linkedin-badge-custom {
+  display: flex;
+  align-items: center;
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 auto 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  color: #e6e6e6;
+  max-width: 450px;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.linkedin-badge-custom:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(214, 43, 43, 0.6);
+}
+
+.badge-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.badge-content {
+  flex: 1;
+  text-align: left;
+}
+
+.badge-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 5px;
+  color: #fff;
+}
+
+.badge-title {
+  font-size: 1rem;
+  margin: 0;
+  color: #aaa;
+}
+
+.badge-description {
+  font-size: 0.9rem;
+  margin: 8px 0;
+  color: #ccc;
+  line-height: 1.3rem;
+}
+
+.badge-company {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Badge Links (LinkedIn, GitHub, Portfolio) */
+.badge-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge-link {
+  display: inline-flex;
+  align-items: center;
+  background-color: #0077b5;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.badge-link:hover {
+  transform: scale(1.08);
+  background-color: #005983;
+}
+
+.badge-link:nth-child(2) { background-color: #24292e; } /* GitHub */
+.badge-link:nth-child(2):hover { background-color: #000; }
+
+.badge-link:nth-child(3) { background-color: #e50914; } /* Portfolio */
+.badge-link:nth-child(3):hover { background-color: #b00710; }
+
+.badge-link svg {
+  margin-right: 6px;
+}
+
+/* Header Text */
+.contact-header p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin: 30px 0 40px;
+}
+
+/* Contact Details */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1e1e1e;
+  padding: 12px 25px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-item:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 22px rgba(214, 43, 43, 0.6);
+}
+
+.contact-icon {
+  font-size: 1.4rem;
+  color: #e50914;
+}
+
+.contact-link {
+  color: #fff;
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Fun Coffee Section */
+.contact-fun {
+  margin-top: 35px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e6e6e6;
+}
+
+.coffee-icon {
+  font-size: 2rem;
+  color: #ff9900;
+  animation: swing 1.2s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes swing {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(20deg); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .linkedin-badge-custom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .badge-content {
+    text-align: center;
+  }
+  .badge-links {
+    justify-content: center;
+  }
+}
